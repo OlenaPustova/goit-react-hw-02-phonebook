@@ -30,14 +30,12 @@ class App extends Component {
   };
 
   deleteContact = contactId => {
-    console.log(contactId);
     this.setState(({ contacts }) => ({
       contacts: contacts.filter(contact => contact.id !== contactId),
     }));
   };
 
   findContact = e => {
-    console.log(e.currentTarget.value);
     this.setState({ filter: e.currentTarget.value });
   };
 

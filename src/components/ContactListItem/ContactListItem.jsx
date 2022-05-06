@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import s from './ContactListItem.module.scss';
 
 function ContactListItem({ contact, onDeleteContact }) {
@@ -19,3 +21,10 @@ function ContactListItem({ contact, onDeleteContact }) {
 }
 
 export default ContactListItem;
+
+ContactListItem.propTypes = {
+  contact: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+  }),
+};
